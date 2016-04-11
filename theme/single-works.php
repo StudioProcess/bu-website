@@ -14,6 +14,10 @@
 			<h2 class="subtitle"><?php echo types_render_field('subtitle', array()); ?></h2>
 			<!-- /post title -->
 
+         <section class="videos">
+            <?php echo prcs_videos_html(); ?>
+         </section>
+
 			<section class="images">
 				<?php foreach (hue_gallery_ids() as $id) {
 					echo wp_get_attachment_image($id, array(1000,1000)) . " " . PHP_EOL;
@@ -28,9 +32,7 @@
 			<?php echo types_render_field('credits', array()); ?>
 			</section>
 
-			<section class="credits">
 			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-			</section>
 
 			<style>
 			<? $fg = types_render_field('foreground-color-post', array()); ?>

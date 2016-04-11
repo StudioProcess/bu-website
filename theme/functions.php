@@ -489,6 +489,62 @@ function prcs_vimeo_shortcode( $atts ) {
 add_shortcode( 'vimeo', 'prcs_vimeo_shortcode' );
 
 
+// vimeo players html for wpcf-videos repeating field
+function prcs_videos_html() {
+   $vids = types_render_field( 'videos', array('output' => 'raw', 'separator'=>',') );
+   $vids = explode(',', $vids);
+   $out = '';
+   foreach ($vids as $vid) {
+      $out .= prcs_vimeo_html($vid);
+   }
+   return $out;
+}
+
+// single vimeo player
+function prcs_vimeo_html( $url_or_id, $atts = array() ) {
+   $id = "";
+   if ( filter_var($url_or_id, FILTER_VALIDATE_URL) ) {
+      $pos = strrpos($url_or_id, '/');
+      if ( $pos === FALSE ) return '';
+      $id = substr($url_or_id, $pos+1);
+   } else {
+      // treat as id
+      $id = $url_or_id;
+   }
+   if ( empty($id) ) return '';
+
+   $atts = shortcode_atts( array(
+     'width' => '640',
+     'height' => '360',
+     'autoplay' => '0',
+     'loop' => '0'
+   ), $atts );
+
+   $autoplay = $atts['autoplay'] == '0' || strtolower( $atts['autoplay'] ) == 'false' ? 0 : 1;
+   $loop = $atts['loop'] == '0' || strtolower( $atts['loop'] ) == 'false' ? 0 : 1;
+   $video_url = sprintf(
+      '//player.vimeo.com/video/%s?autoplay=%s&badge=0&byline=0&color=cccccc&loop=%s&portrait=0&title=1',
+      $id,
+      $autoplay,
+      $loop
+   );
+   $width = intval($atts['width']);
+   $height = intval($atts['height']);
+   $aspect = $height / $width * 100;
+
+   $out = '';
+   $out .= sprintf('<div class="vimeo-outer" style="max-width:%spx;">', $width);
+   $out .= sprintf('<div class="vimeo-inner" style="position:relative; width:100%%; padding-top:%s%%">', $aspect);
+   $out .= sprintf(
+   '<iframe class="vimeo" src="%s" width="100%%" height="100%%" style="position:absolute; top:0; left:0;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' . PHP_EOL,
+      $video_url
+   );
+   $out .= '</div>';
+   $out .= '</div>';
+
+   return $out;
+}
+
 /*------------------------------------*\
    Metadata
 \*------------------------------------*/
