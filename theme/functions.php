@@ -7,7 +7,7 @@
 
 
 require_once "_/modules/is-debug.php";
-require_once "_/modules/sync.php";
+// require_once "_/modules/sync.php";
 
 /*------------------------------------*\
     External Modules/Files
