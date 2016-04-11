@@ -233,4 +233,4 @@ gulp.task('deploy', ['build'], function() {
 /**
  *  default task
  */
-gulp.task('default', ['build']);
+gulp.task('default', ['watch']);
