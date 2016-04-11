@@ -10,7 +10,11 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
 		<meta name="description" content="<?php bloginfo('description'); ?>">
+=======
+		<meta name="description" content="<?php bloginfo('description'); ?>"> 
+>>>>>>> Stashed changes
 
 		<?php wp_head(); ?>
 

@@ -15,7 +15,7 @@
 
 		<?php wp_footer(); ?>
 
-		<!-- analytics -->
+		<!-- analytics
 		<script>
 		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
 		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
@@ -24,6 +24,7 @@
 		ga('create', 'UA-69224418-1', 'process.studio');
 		ga('send', 'pageview');
 		</script>
+		-->
 
 	</body>
 </html>
