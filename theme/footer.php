@@ -3,7 +3,7 @@
 
 				<!-- copyright -->
 				<p class="copyright">
-					PROCESS — STUDIO FOR ART AND DESIGN
+					Beniamin Urbanek — Animation & Film
 				</p>
 				<!-- /copyright -->
 
