@@ -26,6 +26,7 @@
 				// insert next work
 				get_template_part('card-work');
 
+
 			endwhile; endif; ?>
 
 		</section>

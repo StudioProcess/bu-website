@@ -21,12 +21,12 @@
  $font-family-base: "Karla", Helvetica, sans-serif;
  // $font-family-credits: "Inconsolata", Helvetica, sans-serif;
  // $font-family-base: "Palatino Linotype", "Book Antiqua", Palatino, serif;
- $font-size-base: 17;
+ $font-size-base: 20;
  $line-height-base: 1.8;
  $line-height-credits: 1.4;
 
- $fs-menu: 18;
- $fs-footer: 11;
+ $fs-menu: 22;
+ $fs-footer: 18;
 
  $fs-archive-title: 18;
  $fs-archive-subtitle: 13;
@@ -66,11 +66,7 @@
 
 
 @mixin inverted() {
-   background-color:$text-color; color:$body-bg; a { color:$body-bg; }
-}
-
-@mixin invertedBar(){
-
+   a { background-color: $text-color; color:$body-bg;}
 }
 
 
@@ -99,12 +95,12 @@
         font-weight: bold;
         ul { list-style-type: none; padding:0; text-align: center; }
         li { display: inline-block;
-          &:before { content:'— '; }
-          &:first-child:before { display:none; }
-          a { text-decoration:none; padding: 0 0.25em;
-              &:hover { @include inverted(); }
+          //&:before { content:'— '; }
+          //&:first-child:before { display:none; }
+          a { text-decoration:none; background-color: $body-bg; padding: 0 1.25em;
+              &:hover { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
           }
-          &.current-menu-item a { @include inverted(); }
+          &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
         }
   }
 
@@ -150,7 +146,8 @@ body.home, body.archive {
          p { margin:0; }
       }
       a { text-decoration: none; }
-      &:hover .title { @include inverted(); }
+      &:hover .title { font-weight: bold;}
+      a img:hover { color:$text-color; outline: solid 3px $text-color; }
       // &:hover img { outline: 7px inset $text-color; outline-offset:-7px; }
       .title, .subtitle { text-align: center; }
    }
@@ -194,11 +191,11 @@ body.home, body.archive {
    }
 
    article.featured {
-     font-size: 18px;
+     font-size: $font-size-base;
      margin-right: 0.8em;
      margin-left: 0.8em;
-     margin-top:1.3em;
-     margin-bottom:1.3em;
+     margin-top:5.3em;
+     margin-bottom:5.3em;
 
      a {
        text-decoration: none;

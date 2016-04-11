@@ -1,4 +1,4 @@
 <article class="featured">
    <strong>Beniamin Urbanek</strong><br />
-   Animation & Film
+   Works in Animation & Film.
 </article>
