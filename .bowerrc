@@ -1,3 +1,6 @@
 {
-  "directory": "theme/_/bower_components"
+  "directory": "theme/_/bower_components",
+  "scripts" : {
+     "postinstall": "cd theme/_/bower_components/modernizr; npm install; bin/modernizr -c lib/config-all.json; rm -rf node_modules/"
+ }
 }
