@@ -1,13 +1,13 @@
 {
-  "name": "prcs-website",
+  "name": "bu-website",
   "description": "based on html5blank",
   "license": "MIT",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/martinleopold/prcs-website.git"
+    "url": "https://github.com/StudioProcess/bu-website.git"
   },
-  "author": "Martin Leopold",
+  "author": "Studio Process",
   "devDependencies": {
     "browser-sync": "^2.9.11",
     "gulp": "^3.6.0",
@@ -30,7 +30,7 @@
     "vinyl-ftp": "^0.4.5"
   },
   "engines": {
-    "node": "^4.2.1",
-    "npm": "^3.3.8"
+    "node": "^5.10.1",
+    "npm": "^3.8.6"
   }
 }

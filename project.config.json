@@ -1,8 +1,8 @@
 {
-	"browserSyncProxy" : "http://process.studio",
+	"browserSyncProxy" : "http://beniaminurbanek.com",
 	"browser" : "google chrome",
 	"ftpConfig" : "./ftp.config.json",
-	"wwwBase": "wp-content/themes/rkstudio/",
+	"wwwBase": "wp-content/themes/beniaminurbanek/",
 	"basePath" : "theme/",
 	"paths" : {
 		"templates" : {
