@@ -21,17 +21,17 @@
  $font-family-base: "Karla", Helvetica, sans-serif;
  // $font-family-credits: "Inconsolata", Helvetica, sans-serif;
  // $font-family-base: "Palatino Linotype", "Book Antiqua", Palatino, serif;
- $font-size-base: 20;
+ $font-size-base: 18;
  $line-height-base: 1.8;
  $line-height-credits: 1.4;
 
- $fs-menu: 22;
+ $fs-menu: 18;
  $fs-footer: 18;
 
  $fs-archive-title: 18;
  $fs-archive-subtitle: 13;
 
- $fs-title: 26;
+ $fs-title: 18;
  $fs-subtitle: 18;
  $fs-credits: 14;
 
@@ -83,7 +83,7 @@
 
 .header { // Header container
    $header-height: 100px;
-   padding-top: 22px;
+   padding-top: 0px;
    height:$header-height;
    .header-content {
       position:fixed; left:0; width:100%; height:$header-height;
@@ -116,6 +116,7 @@
     position: fixed;
     left: 0;
     bottom: 0;
+    z-index: 10;
 
     @include font-size($fs-menu);
     font-weight: bold;
@@ -123,7 +124,7 @@
     li { display: inline-block;
      //&:before { content:'— '; }
      //&:first-child:before { display:none; }
-    a { display: block; text-decoration:none; background-color: $text-color; color: $body-bg; padding: 0 20px;
+    a { display: block; text-decoration:none; background-color: $body-bg; color: $text-color; padding: 0 20px;
       &:hover { @include inverted(); background-color: $body-bg; color:$text-color;}
     }
       &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color;}
@@ -134,6 +135,7 @@
     position: fixed;
     right: 0;
     bottom: 0;
+    z-index: 10;
 
     @include font-size($fs-menu);
     font-weight: bold;
@@ -141,7 +143,7 @@
     li { display: inline-block;
      //&:before { content:'— '; }
      //&:first-child:before { display:none; }
-    a { display: block; text-decoration:none; background-color: $text-color; color: $body-bg; padding: 0 20px;
+    a { display: block; text-decoration:none; background-color: $body-bg; color: $text-color; padding: 0 20px;
       &:hover { @include inverted(); background-color: $body-bg; color:$text-color;}
     }
       &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color;}
@@ -191,7 +193,7 @@ body.home, body.archive {
       }
       a { text-decoration: none; }
       &:hover .title { font-weight: bold;}
-      a img:hover { color:$text-color; outline: solid 3px $text-color; }
+      a img:hover { color:$text-color; outline: solid 6px $text-color; }
       // &:hover img { outline: 7px inset $text-color; outline-offset:-7px; }
       .title, .subtitle { text-align: center; }
    }
@@ -258,7 +260,7 @@ body.home, body.archive {
  * Single WORK
  */
 body.single-works {
-   .title { @include font-size($fs-title); text-align: center; font-weight:700; text-transform: uppercase; letter-spacing: 1px;}
+   .title { @include font-size($fs-title); padding-top: 20px; text-align: center; font-weight:700;}
    .subtitle { @include font-size($fs-subtitle); text-align: center; font-weight:300;}
 
    .images {
