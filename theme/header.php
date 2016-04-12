@@ -32,10 +32,10 @@
 				<!-- custom navigation -->
 				<div class="navigation" role="navigation">
 					<div class="navigation-works">
-						<ul><li><a href="works">Works</a></li></ul>
+						<ul><li><a href="../works">Works</a></li></ul>
 					</div>
 					<div class="navigation-about">
-						<ul><li><a href="works">About</a></li></ul>
+						<ul><li><a href="../about">About</a></li></ul>
 					</div>
 				</div>
 				<!-- /custom navigation -->
