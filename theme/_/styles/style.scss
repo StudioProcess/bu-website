@@ -97,7 +97,7 @@
         li { display: inline-block;  background-color: $body-bg;
           //&:before { content:'— '; }
           //&:first-child:before { display:none; }
-          a { text-decoration:none; background-color: $body-bg; color: $text-color; padding: 0 20px;
+          a { display: block; text-decoration:none; background-color: $body-bg; color: $text-color; padding: 0 20px;
               &:hover { @include inverted(); background-color: $text-color; color:$body-bg; outline: solid 3px $text-color;}
           }
           &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
@@ -122,7 +122,7 @@
     li { display: inline-block;
      //&:before { content:'— '; }
      //&:first-child:before { display:none; }
-    a { text-decoration:none; background-color: $text-color; color: $body-bg; padding: 0 20px;
+    a { display: block; text-decoration:none; background-color: $text-color; color: $body-bg; padding: 0 20px;
       &:hover { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
     }
       &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
@@ -140,7 +140,7 @@
     li { display: inline-block;
      //&:before { content:'— '; }
      //&:first-child:before { display:none; }
-    a { text-decoration:none; background-color: $text-color; color: $body-bg; padding: 0 20px;
+    a { display: block; text-decoration:none; background-color: $text-color; color: $body-bg; padding: 0 20px;
       &:hover { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
     }
       &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
