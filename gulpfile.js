@@ -95,9 +95,9 @@ gulp.task('bower-scripts', function() {
    };
    return gulp.src( $.mainBowerFiles(mainBowerFilesOptions) )
       .pipe( $.debug({title: "bower-scripts:"}) )
+      .pipe( $.uglify({ preserveComments: $.uglifySaveLicense })).on('error', errorHandler('Uglify') )
       // .pipe($.sourcemaps.init())
       .pipe( $.concat('vendor.js') )
-      .pipe( $.uglify({ preserveComments: $.uglifySaveLicense })).on('error', errorHandler('Uglify') )
       // .pipe($.rename({extname: '.min.js'}))
       // .pipe($.sourcemaps.write( '.' ))
       .pipe( gulp.dest(destPath('scripts')) )
