@@ -30,8 +30,9 @@ if (function_exists('add_theme_support'))
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
 
-
-   //  add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('square-thumbnail', 640, 480, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('medium-view', 640, 640, false);
+    add_image_size('large-view', 1280, 1280, false);
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -39,6 +40,16 @@ if (function_exists('add_theme_support'))
     'default-image' => get_template_directory_uri() . '/_/img/bg.jpg'
     ));*/
 }
+
+
+function prcs_remove_default_image_sizes($sizes) {
+   //  unset( $sizes['thumbnail'] );
+   unset( $sizes['medium'] );
+   unset( $sizes['large'] );
+   return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', 'prcs_remove_default_image_sizes');
+
 
 /*------------------------------------*\
     Functions
