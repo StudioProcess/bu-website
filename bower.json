@@ -1,12 +1,12 @@
 {
-  "name": "HTML5Blank",
-  "version": "1.5.0",
+  "name": "bu-website",
+  "version": "0.1.0",
   "author": "Todd Motto",
   "dependencies": {
     "jquery": "^2.2.3",
-    "modernizr": "^3.3.1",
     "normalize-css": "^4.0.0",
-    "imagesloaded": "^4.1.0"
+    "imagesloaded": "^4.1.0",
+    "PACE": "https://github.com/HubSpot/pace.git#^1.0.2"
   },
   "overrides": {
     "modernizr": {
