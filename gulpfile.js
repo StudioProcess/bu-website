@@ -37,15 +37,19 @@ var joinPath = require('path').join;
 ftpConfig.log = $.util.log;
 $.ftp = $.vinylFtp.create(ftpConfig);
 
+// configure gulp-notify
+// $.notify.logLevel(0);
+
 /**
  *  utilities
  */
 // common error handler vor gulp plugins
 var errorHandler = function(title) {
-  return function(err) {
-    $.util.log($.util.colors.red('[' + title + ']'), err.toString());
-    this.emit('end');
-  };
+   return function(err) {
+      $.notify.onError({title: title + ' Error'})(err); // also logs to console
+      // $.util.log($.util.colors.red('[' + title + ']'), err.message);
+      this.emit('end');
+   };
 };
 
 // get the src glob array from config
