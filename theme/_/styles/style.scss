@@ -98,9 +98,10 @@
           //&:before { content:'— '; }
           //&:first-child:before { display:none; }
           a { display: block; text-decoration:none; background-color: $body-bg; color: $text-color; padding: 0 20px;
-              &:hover { @include inverted(); background-color: $text-color; color:$body-bg; outline: solid 3px $text-color;}
+              &:hover { @include inverted(); background-color: $text-color; color: $body-bg; }
           }
-          &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
+          &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color;
+          &:hover { @include inverted(); background-color: $text-color; color: $body-bg; } }
         }
     }
 }
@@ -123,9 +124,9 @@
      //&:before { content:'— '; }
      //&:first-child:before { display:none; }
     a { display: block; text-decoration:none; background-color: $text-color; color: $body-bg; padding: 0 20px;
-      &:hover { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
+      &:hover { @include inverted(); background-color: $body-bg; color:$text-color;}
     }
-      &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
+      &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color;}
     }
   }
   .navigation-about {
@@ -141,9 +142,9 @@
      //&:before { content:'— '; }
      //&:first-child:before { display:none; }
     a { display: block; text-decoration:none; background-color: $text-color; color: $body-bg; padding: 0 20px;
-      &:hover { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
+      &:hover { @include inverted(); background-color: $body-bg; color:$text-color;}
     }
-      &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
+      &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color;}
     }
 
   }
