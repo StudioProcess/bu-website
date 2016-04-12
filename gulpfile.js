@@ -122,7 +122,7 @@ gulp.task('upload-scripts', ['scripts'], function() {
 
 
 /**
- *  CSS / sass, autoprefixer, minify-css, sourcemaps, livereload
+ *  CSS / sass, autoprefixer, clean-css, sourcemaps, livereload
  */
 gulp.task('styles', ['bower-styles'], function() {
    var sassOptions = {
@@ -134,7 +134,7 @@ gulp.task('styles', ['bower-styles'], function() {
       .pipe( $.sourcemaps.init() )
       .pipe( $.sass(sassOptions) ).on( 'error', errorHandler('Sass') )
       .pipe( $.autoprefixer() ).on( 'error', errorHandler('Autoprefixer') )
-      .pipe( $.minifyCss() ).on( 'error', errorHandler('Minify CSS') )
+      .pipe( $.cleanCss() ).on( 'error', errorHandler('Clean CSS') )
       .pipe( $.sourcemaps.write('.') )
       .pipe( gulp.dest(destPath('styles')) )
       .pipe( $.size({title: "styles:", showFiles: true}) );
@@ -151,7 +151,7 @@ gulp.task('bower-styles', function() {
       .pipe( $.debug({title: "bower-styles:"}) )
       // .pipe($.sourcemaps.init())
       .pipe( $.concat('vendor.css') )
-      .pipe( $.minifyCss() ).on( 'error', errorHandler('Minify CSS') )
+      .pipe( $.cleanCss() ).on( 'error', errorHandler('Clean CSS') )
       // .pipe($.rename({extname: '.min.js'}))
       // .pipe($.sourcemaps.write( '.' ))
       .pipe( gulp.dest(destPath('styles')) )
