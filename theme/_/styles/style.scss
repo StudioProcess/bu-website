@@ -89,7 +89,6 @@
       position:fixed; left:0; width:100%; height:$header-height;
       z-index: 10;
    }
-
      nav { z-index: 10;
         @include font-size($fs-menu);
         font-weight: bold;
@@ -97,13 +96,56 @@
         li { display: inline-block;
           //&:before { content:'— '; }
           //&:first-child:before { display:none; }
-          a { text-decoration:none; background-color: $body-bg; padding: 0 1.25em;
+          a { text-decoration:none; background-color: $body-bg; padding: 0 20px;
               &:hover { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
           }
           &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
         }
-  }
+    }
+}
 
+.navigation {
+  height: 180px;
+  z-index: 10;
+
+
+  .navigation-works {
+    padding-left: 25px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    @include font-size($fs-menu);
+    font-weight: bold;
+    ul { list-style-type: none; padding:0; text-align: center; }
+    li { display: inline-block;
+     //&:before { content:'— '; }
+     //&:first-child:before { display:none; }
+    a { text-decoration:none; background-color: $body-bg; padding: 0 20px;
+      &:hover { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
+    }
+      &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
+    }
+  }
+  .navigation-about {
+    padding-right: 25px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    @include font-size($fs-menu);
+    font-weight: bold;
+    ul { list-style-type: none; padding:0; text-align: center; }
+    li { display: inline-block;
+     //&:before { content:'— '; }
+     //&:first-child:before { display:none; }
+    a { text-decoration:none; background-color: $body-bg; padding: 0 20px;
+      &:hover { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
+    }
+      &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
+    }
+
+  }
 }
 
 .footer {
