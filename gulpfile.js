@@ -29,7 +29,7 @@ var ftpConfig = require(config.ftpConfig);
 // init gulp and plugins
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')({
-   pattern: ['gulp-*', 'gulp.*', 'browser-sync', 'main-bower-files', 'vinyl-ftp', 'uglify-save-license']
+   pattern: ['gulp-*', 'gulp.*', 'browser-sync', 'main-bower-files', 'vinyl-ftp']
 });
 var joinPath = require('path').join;
 
@@ -78,7 +78,7 @@ gulp.task('scripts', ['bower-scripts'], function() {
       .pipe( $.jshint() )
       .pipe( $.jshint.reporter('jshint-stylish') )
       .pipe( $.sourcemaps.init() )
-      .pipe( $.uglify({ preserveComments: $.uglifySaveLicense })).on('error', errorHandler('Uglify') )
+      .pipe( $.uglify({ preserveComments: 'license' })).on('error', errorHandler('Uglify') )
       .pipe( $.rename({extname: '.min.js'}) )
       .pipe( $.sourcemaps.write('.') )
       .pipe( gulp.dest(destPath('scripts')) )
@@ -95,7 +95,7 @@ gulp.task('bower-scripts', function() {
    };
    return gulp.src( $.mainBowerFiles(mainBowerFilesOptions) )
       .pipe( $.debug({title: "bower-scripts:"}) )
-      .pipe( $.uglify({ preserveComments: $.uglifySaveLicense })).on('error', errorHandler('Uglify') )
+      .pipe( $.uglify({ preserveComments: 'license' })).on('error', errorHandler('Uglify') )
       // .pipe($.sourcemaps.init())
       .pipe( $.concat('vendor.js') )
       // .pipe($.rename({extname: '.min.js'}))
