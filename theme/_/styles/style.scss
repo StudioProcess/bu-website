@@ -92,12 +92,13 @@
      nav { z-index: 10;
         @include font-size($fs-menu);
         font-weight: bold;
+        line-height: 3.0;
         ul { list-style-type: none; padding:0; text-align: center; }
-        li { display: inline-block;
+        li { display: inline-block;  background-color: $body-bg;
           //&:before { content:'— '; }
           //&:first-child:before { display:none; }
-          a { text-decoration:none; background-color: $text-color; color: $body-bg; padding: 0 20px;
-              &:hover { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
+          a { text-decoration:none; background-color: $body-bg; color: $text-color; padding: 0 20px;
+              &:hover { @include inverted(); background-color: $text-color; color:$body-bg; outline: solid 3px $text-color;}
           }
           &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color; outline: solid 3px $text-color;}
         }
@@ -117,7 +118,7 @@
 
     @include font-size($fs-menu);
     font-weight: bold;
-    ul { list-style-type: none; padding:0; text-align: center; }
+    ul { list-style-type: none; padding:0; text-align: center; line-height: 3.0; background-color: #000000; }
     li { display: inline-block;
      //&:before { content:'— '; }
      //&:first-child:before { display:none; }
@@ -135,7 +136,7 @@
 
     @include font-size($fs-menu);
     font-weight: bold;
-    ul { list-style-type: none; padding:0; text-align: center; }
+    ul { list-style-type: none; padding:0; text-align: center; line-height: 3.0; background-color: #000000; }
     li { display: inline-block;
      //&:before { content:'— '; }
      //&:first-child:before { display:none; }
