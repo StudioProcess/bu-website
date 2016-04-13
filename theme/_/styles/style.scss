@@ -635,8 +635,8 @@ body.single-works {
       flex-basis: initial;
     }
     article[style] {
-      max-width: 200px !important;
-      margin: 0 2.5vw 100px !important;
+      max-width: 170px !important;
+      margin: 0 0.5vw 50px !important;
       padding: 0 !important;
       position: relative;
       .subtitle {
@@ -652,7 +652,7 @@ body.single-works {
         top: 0;
         pointer-events: none;
         &:before {
-          background-color: $text-color;
+          background-color: $body-bg;
           content: ' ';
           display: block;
           position: absolute;
@@ -670,13 +670,13 @@ body.single-works {
           text-decoration: none;
           text-transform: none;
           @include font-size($fs-subtitle);
-          color: $body-bg;
+          color: $text-color;
         }
         margin: 0 15px;
       }
       &:hover {
         hgroup:before {
-          opacity: 0.9;
+          opacity: 1.0;
         }
         .title {
           opacity: 1;
