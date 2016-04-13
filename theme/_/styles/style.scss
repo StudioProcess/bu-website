@@ -26,7 +26,8 @@
  $line-height-credits: 1.4;
 
  $fs-menu: 18;
- $fs-footer: 18;
+ $fs-menu-mobile: 13;
+ $fs-footer: 12;
 
  $fs-archive-title: 18;
  $fs-archive-subtitle: 13;
@@ -81,85 +82,289 @@
   position: relative;
 }
 
-.header { // Header container
-   $header-height: 100px;
-   padding-top: 0px;
-   height:$header-height;
-   .header-content {
-      position:fixed; left:0; width:100%; height:$header-height;
-      z-index: 11;
-   }
-     nav { z-index: 11;
-        @include font-size($fs-menu);
-        font-weight: bold;
-        line-height: 3.0;
-        ul { list-style-type: none; padding:0; text-align: center; }
-        li { display: inline-block;  background-color: $body-bg;
-          //&:before { content:'— '; }
-          //&:first-child:before { display:none; }
-          a { display: block; text-decoration:none; background-color: $body-bg; color: $text-color; padding: 0 20px;
-              &:hover { @include inverted(); background-color: $text-color; color: $body-bg; }
+@media (min-width: 600px) {
+  .header {
+    // Header container
+    $header-height: 100px;
+    padding-top: 0;
+    height: $header-height;
+    .header-content {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      height: $header-height;
+      z-index: 10;
+    }
+    nav {
+      z-index: 10;
+      @include font-size($fs-menu);
+      font-weight: bold;
+      line-height: 3.0;
+      ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+      }
+      li {
+        display: inline-block;
+        background-color: $body-bg;
+        //&:before { content:'— '; }
+        //&:first-child:before { display:none; }
+        a {
+          display: block;
+          text-decoration: none;
+          background-color: $body-bg;
+          color: $text-color;
+          padding: 0 20px;
+          &:hover {
+            @include inverted();
+            background-color: $text-color;
+            color: $body-bg;
           }
-          &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color;
-          &:hover { @include inverted(); background-color: $text-color; color: $body-bg; } }
         }
-    }
-}
-
-.navigation {
-  height: 180px;
-  z-index: 10;
-
-
-  .navigation-works {
-    padding-left: 25px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    z-index: 10;
-
-    @include font-size($fs-menu);
-    font-weight: bold;
-    ul { list-style-type: none; padding:0; text-align: center; line-height: 3.0; background-color: #000000; }
-    li { display: inline-block;
-     //&:before { content:'— '; }
-     //&:first-child:before { display:none; }
-    a { display: block; text-decoration:none; background-color: $body-bg; color: $text-color; padding: 0 20px;
-      &:hover { @include inverted(); background-color: $body-bg; color:$text-color;}
-    }
-      &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color;}
+        &.current-menu-item a {
+          @include inverted();
+          background-color: $body-bg;
+          color: $text-color;
+          &:hover {
+            @include inverted();
+            background-color: $text-color;
+            color: $body-bg;
+          }
+        }
+      }
     }
   }
-  .navigation-about {
-    padding-right: 25px;
-    position: fixed;
-    right: 0;
-    top: 0;
+  .navigation {
+    height: 180px;
     z-index: 10;
-
-    @include font-size($fs-menu);
-    font-weight: bold;
-    ul { list-style-type: none; padding:0; text-align: center; line-height: 3.0; background-color: #000000; }
-    li { display: inline-block;
-     //&:before { content:'— '; }
-     //&:first-child:before { display:none; }
-    a { display: block; text-decoration:none; background-color: $body-bg; color: $text-color; padding: 0 20px;
-      &:hover { @include inverted(); background-color: $body-bg; color:$text-color;}
+    .navigation-works {
+      position: fixed;
+      padding-left: 25px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 10;
+      @include font-size($fs-menu);
+      font-weight: bold;
+      ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        line-height: 3.0;
+        background-color: #000000;
+      }
+      li {
+        display: inline-block;
+        //&:before { content:'— '; }
+        //&:first-child:before { display:none; }
+        a {
+          display: block;
+          text-decoration: none;
+          background-color: $body-bg;
+          color: $text-color;
+          padding: 0 20px;
+          &:hover {
+            @include inverted();
+            background-color: $body-bg;
+            color: $text-color;
+          }
+        }
+        &.current-menu-item a {
+          @include inverted();
+          background-color: $body-bg;
+          color: $text-color;
+        }
+      }
     }
-      &.current-menu-item a { @include inverted(); background-color: $body-bg; color:$text-color;}
+    .navigation-about {
+      padding-right: 25px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 10;
+      @include font-size($fs-menu);
+      font-weight: bold;
+      ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        line-height: 3.0;
+        background-color: #000000;
+      }
+      li {
+        display: inline-block;
+        //&:before { content:'— '; }
+        //&:first-child:before { display:none; }
+        a {
+          display: block;
+          text-decoration: none;
+          background-color: $body-bg;
+          color: $text-color;
+          padding: 0 20px;
+          &:hover {
+            @include inverted();
+            background-color: $body-bg;
+            color: $text-color;
+          }
+        }
+        &.current-menu-item a {
+          @include inverted();
+          background-color: $body-bg;
+          color: $text-color;
+        }
+      }
     }
+  }
+}
 
+@media (max-width: 599px) {
+  .header {
+    // Header container
+    $header-height: 100px;
+    padding-top: 0;
+    height: $header-height;
+    .header-content {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      height: $header-height;
+      z-index: 10;
+    }
+    nav {
+      z-index: 10;
+      @include font-size($fs-menu-mobile);
+      font-weight: bold;
+      line-height: 3.0;
+      ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+      }
+      li {
+        display: inline-block;
+        width: 100%;
+        background-color: $body-bg;
+        //&:before { content:'— '; }
+        //&:first-child:before { display:none; }
+        a {
+          display: block;
+          text-decoration: none;
+          background-color: $body-bg;
+          color: $text-color;
+          padding: 0 20px;
+          &:hover {
+            @include inverted();
+            background-color: $text-color;
+            color: $body-bg;
+          }
+        }
+        &.current-menu-item a {
+          @include inverted();
+          background-color: $body-bg;
+          color: $text-color;
+          &:hover {
+            @include inverted();
+            background-color: $text-color;
+            color: $body-bg;
+          }
+        }
+      }
+    }
+  }
+  .navigation {
+    height: 180px;
+    z-index: 10;
+    .navigation-works {
+      position: fixed;
+      padding-left: 10px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 10;
+      @include font-size($fs-menu-mobile);
+      font-weight: bold;
+      ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        line-height: 3.0;
+        background-color: #000000;
+      }
+      li {
+        display: inline-block;
+        //&:before { content:'— '; }
+        //&:first-child:before { display:none; }
+        a {
+          display: block;
+          text-decoration: none;
+          background-color: $body-bg;
+          color: $text-color;
+          padding-left: 10px;
+          padding-right: 5px;
+          &:hover {
+            @include inverted();
+            background-color: $body-bg;
+            color: $text-color;
+          }
+        }
+        &.current-menu-item a {
+          @include inverted();
+          background-color: $body-bg;
+          color: $text-color;
+        }
+      }
+    }
+    .navigation-about {
+      padding-right: 10px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 10;
+      @include font-size($fs-menu-mobile);
+      font-weight: bold;
+      ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        line-height: 3.0;
+        background-color: #000000;
+      }
+      li {
+        display: inline-block;
+        //&:before { content:'— '; }
+        //&:first-child:before { display:none; }
+        a {
+          display: block;
+          text-decoration: none;
+          padding-right: 10px;
+          padding-left: 5px;
+          background-color: $body-bg;
+          color: $text-color;
+          &:hover {
+            @include inverted();
+            background-color: $body-bg;
+            color: $text-color;
+          }
+        }
+        &.current-menu-item a {
+          @include inverted();
+          background-color: $body-bg;
+          color: $text-color;
+        }
+      }
+    }
   }
 }
 
 .footer {
-   @include font-size($fs-footer);
-   text-align: center;
-   margin-top: 100px;
-
-   p {
-     font-weight: bold;
-   }
+  font-family: "Inconsolata";
+  @include font-size($fs-footer);
+  text-align: center;
+  margin-top: 100px;
+  p {
+    font-weight: bold;
+  }
 }
 
 
@@ -384,6 +589,8 @@ body.page {
     }
  }
 }
+
+
 
 .pace {
   -webkit-pointer-events: none;
