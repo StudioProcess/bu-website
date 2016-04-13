@@ -27,7 +27,7 @@
 
  $fs-menu: 18;
  $fs-menu-mobile: 13;
- $fs-footer: 12;
+ $fs-footer: 14;
 
  $fs-archive-title: 18;
  $fs-archive-subtitle: 13;
@@ -94,6 +94,8 @@
       width: 100%;
       height: $header-height;
       z-index: 10;
+      display: inline-block;
+
     }
     nav {
       z-index: 10;
@@ -363,7 +365,7 @@
   text-align: center;
   margin-top: 100px;
   p {
-    font-weight: bold;
+    font-weight: normal;
   }
 }
 
@@ -634,7 +636,7 @@ body.single-works {
     .work-container {
       flex-basis: initial;
     }
-    article[style] {
+    article {
       max-width: 170px !important;
       margin: 0 0.5vw 50px !important;
       padding: 0 !important;
