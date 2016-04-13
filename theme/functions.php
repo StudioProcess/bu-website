@@ -420,6 +420,18 @@ function prcs_time_ago($ptime) {
 
 
 /*------------------------------------*\
+   Content
+\*------------------------------------*/
+
+// get any posts content by id or name
+function prcs_get_post_content($id = null) {
+   $post = get_post($id);
+   return wpautop( $post->post_content);
+}
+
+
+
+/*------------------------------------*\
    Admin
 \*------------------------------------*/
 
