@@ -87,9 +87,9 @@
    height:$header-height;
    .header-content {
       position:fixed; left:0; width:100%; height:$header-height;
-      z-index: 10;
+      z-index: 11;
    }
-     nav { z-index: 10;
+     nav { z-index: 11;
         @include font-size($fs-menu);
         font-weight: bold;
         line-height: 3.0;
@@ -114,7 +114,7 @@
   .navigation-works {
     padding-left: 25px;
     position: fixed;
-    left: 0;
+    top: 0;
     bottom: 0;
     z-index: 10;
 
@@ -134,7 +134,7 @@
     padding-right: 25px;
     position: fixed;
     right: 0;
-    bottom: 0;
+    top: 0;
     z-index: 10;
 
     @include font-size($fs-menu);
