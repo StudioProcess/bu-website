@@ -395,10 +395,10 @@ body.home, body.archive {
          margin-top:0.8em;
          p { margin:0; }
       }
-      a { font-weight: bold; text-decoration: none; 
+      a { font-weight: bold; text-decoration: none;
         }
       a img {
-        filter: grayscale(100%) opacity(0.6);
+
       }
       &:hover .title { color: $accent-color;}
       a img:hover { color: $accent-color; }
@@ -500,11 +500,17 @@ body.single-works {
 
      @include font-size($fs-credits);
      line-height: $line-height-credits;
-     width: 100%;
+
      max-width:$article-width; margin:0 auto;
+    text-align: center;
      a {
        text-decoration: none;
      }
+    }
+
+    .text {
+      position: relative;
+      max-width: 800px;
     }
 }
 
