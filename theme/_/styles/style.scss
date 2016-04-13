@@ -403,7 +403,6 @@ body.home, body.archive {
       &:hover .title { color: $accent-color;}
       a img:hover { color: $accent-color; }
        &:hover img { opacity: 1.0;
-         filter: grayscale(0%);
          //outline: 7px solid $accent-color; outline-offset:-7px;
        }
       .title, .subtitle { text-align: center; }
