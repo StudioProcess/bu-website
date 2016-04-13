@@ -21,11 +21,11 @@
  $font-family-base: "Karla", Helvetica, sans-serif;
  // $font-family-credits: "Inconsolata", Helvetica, sans-serif;
  // $font-family-base: "Palatino Linotype", "Book Antiqua", Palatino, serif;
- $font-size-base: 18;
+ $font-size-base: 17;
  $line-height-base: 1.8;
  $line-height-credits: 1.4;
 
- $fs-menu: 22;
+ $fs-menu: 17;
  $fs-menu-mobile: 13;
  $fs-footer: 14;
 
@@ -44,7 +44,7 @@
  $body-bg: #fff;
  $selection-bg: #fff;
  $selection-fg: lighten($text-color, 50%);
- $accent-color: #6b6b6b;
+ $accent-color: #0000FF;
 
 // grid
  $wrapper-width: 1280px;
@@ -86,20 +86,20 @@
 @media (min-width: 600px) {
   .header-back {
     width: 100%;
-    height: 100px;
+    height: 90px;
     background-color: $body-bg;
     position: fixed;
-    opacity: 0.9;
+    opacity: 0.97;
   }
 }
 
 @media (max-width: 599px) {
   .header-back {
     width: 100%;
-    height: 70px;
+    height: 65px;
     background-color: $body-bg;
     position: fixed;
-    opacity: 0.9;
+    opacity: 0.97;
   }
 }
 
@@ -232,7 +232,7 @@
 @media (max-width: 599px) {
   .header {
     // Header container
-    $header-height: 100px;
+    $header-height: 60px;
     padding-top: 0;
     height: $header-height;
     .header-content {
@@ -395,12 +395,21 @@ body.home, body.archive {
          margin-top:0.8em;
          p { margin:0; }
       }
-      a { font-weight: bold; text-decoration: none; }
+      a { font-weight: bold; text-decoration: none; 
+        }
+      a img {
+        filter: grayscale(100%) opacity(0.6);
+      }
       &:hover .title { color: $accent-color;}
       a img:hover { color: $accent-color; }
-       &:hover img { outline: 7px solid $accent-color; outline-offset:-7px; }
+       &:hover img { opacity: 1.0;
+         filter: grayscale(0%);
+         //outline: 7px solid $accent-color; outline-offset:-7px;
+       }
       .title, .subtitle { text-align: center; }
+
    }
+
 }
 
 .work-container {
