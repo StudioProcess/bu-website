@@ -94,6 +94,8 @@
       width: 100%;
       height: $header-height;
       z-index: 10;
+      display: inline-block;
+
     }
     nav {
       z-index: 10;
@@ -684,7 +686,7 @@ body.single-works {
         cursor: pointer;
       }
       img {
-        // filter: grayscale(100%);
+        filter: grayscale(100%);
         opacity: 0.9;
       }
       &:before {

@@ -3,7 +3,7 @@
 
 				<!-- copyright -->
 				<p class="copyright">
-					Beniamin Urbanek — Film & Animation
+					Beniamin Urbanek Film und Animation
 				</p>
 				<!-- /copyright -->
 
