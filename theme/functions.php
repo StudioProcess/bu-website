@@ -429,6 +429,15 @@ function prcs_get_post_content($id = null) {
    return wpautop( $post->post_content);
 }
 
+//
+function prcs_get_reel() {
+   $vid_id = get_post_meta(490, 'wpcf-single-video', true);
+   // debug($vid_id);
+   if ( empty($vid_id) ) return;
+   return prcs_vimeo_html($vid_id);
+}
+
+
 
 
 /*------------------------------------*\
