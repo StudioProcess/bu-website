@@ -3,7 +3,7 @@
 
 				<!-- copyright -->
 				<p class="copyright">
-					Beniamin Urbanek — Film &amp; Animation
+					<?php bloginfo('name'); $desc = get_bloginfo('description'); if (!empty($desc)) echo ' — ' . $desc; ?>
 				</p>
 				<!-- /copyright -->
 
