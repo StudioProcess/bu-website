@@ -30,7 +30,8 @@ if (function_exists('add_theme_support'))
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
 
-    add_image_size('square-thumbnail', 640, 480, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('post-thumbnail', 480, 270, true); // Custom Thumbnail Size call using
+    add_image_size('square-thumbnail', 360, 360, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
     add_image_size('medium-view', 640, 640, false);
     add_image_size('large-view', 1280, 1280, false);
 
@@ -378,6 +379,7 @@ function prcs_thumbnail_data($size = 'medium') {
    );
 }
 
+
 // srand(0);
 function prcs_rnd_margins($min, $max, $steps) {
    if ($steps < 1) $steps = 1;
@@ -414,6 +416,23 @@ function prcs_time_ago($ptime) {
         }
     }
 }
+
+/*------------------------------------*\
+   Images
+\*------------------------------------*/
+
+// use full size thumbnail for gifs to preserve animation
+function prcs_filter_post_thumbnail_size($size) {
+   if ($size == 'full') return $size;
+   $id = get_post_thumbnail_id();
+   $mime = get_post_mime_type($id);
+   if ($mime == "image/gif") {
+      $size = 'full';
+   }
+   return $size;
+}
+add_filter( 'post_thumbnail_size', 'prcs_filter_post_thumbnail_size' );
+
 
 
 /*------------------------------------*\
