@@ -40,10 +40,11 @@
 
 
  // colors
- $text-color: #111;
+ $text-color: #1b1b1b;
  $body-bg: #fff;
  $selection-bg: #fff;
  $selection-fg: lighten($text-color, 50%);
+ $accent-color: #6b6b6b;
 
 // grid
  $wrapper-width: 1280px;
@@ -83,6 +84,26 @@
 }
 
 @media (min-width: 600px) {
+  .header-back {
+    width: 100%;
+    height: 100px;
+    background-color: $body-bg;
+    position: fixed;
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 599px) {
+  .header-back {
+    width: 100%;
+    height: 70px;
+    background-color: $body-bg;
+    position: fixed;
+    opacity: 0.9;
+  }
+}
+
+@media (min-width: 600px) {
   .header {
     // Header container
     $header-height: 100px;
@@ -109,29 +130,23 @@
       }
       li {
         display: inline-block;
-        background-color: $body-bg;
         //&:before { content:'— '; }
         //&:first-child:before { display:none; }
         a {
           display: block;
           text-decoration: none;
-          background-color: $body-bg;
           color: $text-color;
           padding: 0 20px;
           &:hover {
             @include inverted();
-            background-color: $text-color;
-            color: $body-bg;
+            color: $accent-color;
           }
         }
         &.current-menu-item a {
           @include inverted();
-          background-color: $body-bg;
-          color: $text-color;
           &:hover {
             @include inverted();
-            background-color: $text-color;
-            color: $body-bg;
+            color: $accent-color;
           }
         }
       }
@@ -154,7 +169,6 @@
         padding: 0;
         text-align: center;
         line-height: 3.0;
-        background-color: #000000;
       }
       li {
         display: inline-block;
@@ -163,13 +177,11 @@
         a {
           display: block;
           text-decoration: none;
-          background-color: $body-bg;
           color: $text-color;
           padding: 0 20px;
           &:hover {
             @include inverted();
-            background-color: $body-bg;
-            color: $text-color;
+            color: $accent-color;
           }
         }
         &.current-menu-item a {
@@ -192,7 +204,6 @@
         padding: 0;
         text-align: center;
         line-height: 3.0;
-        background-color: #000000;
       }
       li {
         display: inline-block;
@@ -201,13 +212,11 @@
         a {
           display: block;
           text-decoration: none;
-          background-color: $body-bg;
           color: $text-color;
           padding: 0 20px;
           &:hover {
             @include inverted();
-            background-color: $body-bg;
-            color: $text-color;
+            color: $accent-color;
           }
         }
         &.current-menu-item a {
@@ -246,29 +255,24 @@
       li {
         display: inline-block;
         width: 100%;
-        background-color: $body-bg;
         //&:before { content:'— '; }
         //&:first-child:before { display:none; }
         a {
           display: block;
           text-decoration: none;
-          background-color: $body-bg;
           color: $text-color;
           padding: 0 20px;
           &:hover {
             @include inverted();
-            background-color: $text-color;
-            color: $body-bg;
+            color: $accent-color;
           }
         }
         &.current-menu-item a {
           @include inverted();
-          background-color: $body-bg;
           color: $text-color;
           &:hover {
             @include inverted();
-            background-color: $text-color;
-            color: $body-bg;
+            color: $accent-color;
           }
         }
       }
@@ -291,7 +295,6 @@
         padding: 0;
         text-align: center;
         line-height: 3.0;
-        background-color: #000000;
       }
       li {
         display: inline-block;
@@ -300,25 +303,22 @@
         a {
           display: block;
           text-decoration: none;
-          background-color: $body-bg;
           color: $text-color;
           padding-left: 10px;
           padding-right: 5px;
           &:hover {
             @include inverted();
-            background-color: $body-bg;
-            color: $text-color;
+            color: $accent-color;
           }
         }
         &.current-menu-item a {
           @include inverted();
-          background-color: $body-bg;
           color: $text-color;
         }
       }
     }
     .navigation-about {
-      padding-right: 10px;
+      padding-right: 10;
       position: fixed;
       right: 0;
       top: 0;
@@ -330,7 +330,6 @@
         padding: 0;
         text-align: center;
         line-height: 3.0;
-        background-color: #000000;
       }
       li {
         display: inline-block;
@@ -341,17 +340,14 @@
           text-decoration: none;
           padding-right: 10px;
           padding-left: 5px;
-          background-color: $body-bg;
           color: $text-color;
           &:hover {
             @include inverted();
-            background-color: $body-bg;
-            color: $text-color;
+            color: $accent-color;
           }
         }
         &.current-menu-item a {
           @include inverted();
-          background-color: $body-bg;
           color: $text-color;
         }
       }
@@ -387,6 +383,7 @@ body.home, body.archive {
       margin-bottom: 10%;
       margin-bottom: 10vw;
       margin-right: 2%;
+      margin-top: 40px;
 
       .title { @include font-size($fs-archive-title); font-weight:500;
          .title-extra:before { content:"—"; }
@@ -398,10 +395,10 @@ body.home, body.archive {
          margin-top:0.8em;
          p { margin:0; }
       }
-      a { text-decoration: none; }
-      &:hover .title { font-weight: bold;}
-      a img:hover { color:$text-color; outline: solid 6px $text-color; }
-      // &:hover img { outline: 7px inset $text-color; outline-offset:-7px; }
+      a { font-weight: bold; text-decoration: none; }
+      &:hover .title { color: $accent-color;}
+      a img:hover { color: $accent-color; }
+       &:hover img { outline: 7px solid $accent-color; outline-offset:-7px; }
       .title, .subtitle { text-align: center; }
    }
 }
@@ -451,12 +448,13 @@ body.home, body.archive {
      margin-bottom:5.3em;
 
      a {
+       font-weight: bold;
        text-decoration: none;
        border-bottom: 1px solid #000000;
      }
      a:hover {
-       color: #a8a8a8;
-       border-bottom: 1px solid #a8a8a8;
+       color: $accent-color;
+       border-bottom: 2px solid $accent-color;
      }
    }
 }
@@ -479,7 +477,12 @@ body.single-works {
      max-width:$article-width; margin:0 auto;
      a {
        text-decoration: none;
-       border-bottom: 1px solid #000000;
+       font-weight: bold;
+       border-bottom: 1px solid $text-color;
+     }
+     a:hover {
+       color: $accent-color;
+       border-bottom: 1px solid $accent-color;
      }
    }
    .credits {
@@ -614,7 +617,7 @@ body.page {
   top: 0;
   right: 100%;
   width: 100%;
-  height: 3px;
+  height: 4px;
  }
 
 /* Work thumbnails on single works */
