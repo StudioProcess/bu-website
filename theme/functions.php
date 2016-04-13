@@ -417,6 +417,26 @@ function prcs_time_ago($ptime) {
     }
 }
 
+
+
+/*------------------------------------*\
+   Admin
+\*------------------------------------*/
+
+// custom admin page for 'reel'
+function prcs_reel_admin() {
+   $reel = 490;
+   $id = get_the_id();
+   if ( $id == $reel ) {
+      echo '<style type="text/css"> #postdivrich {display:none;} </style>';
+   } else {
+      echo '<style type="text/css"> #wpcf-group-video {display:none;} </style>';
+   }
+}
+add_action('admin_head', 'prcs_reel_admin');
+
+
+
 /*------------------------------------*\
    Images
 \*------------------------------------*/
