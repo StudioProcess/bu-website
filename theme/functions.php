@@ -536,7 +536,7 @@ function prcs_vimeo_shortcode( $atts ) {
    $autoplay = $a['autoplay'] == '0' || strtolower( $a['autoplay'] ) == 'false' ? 0 : 1;
    $loop = $a['loop'] == '0' || strtolower( $a['loop'] ) == 'false' ? 0 : 1;
    $video_url = sprintf(
-      '//player.vimeo.com/video/%s?autoplay=%s&badge=0&byline=0&color=cccccc&loop=%s&portrait=0&title=1',
+      '//player.vimeo.com/video/%s?autoplay=%s&badge=0&byline=0&color=cccccc&loop=%s&portrait=0&title=0',
       $id,
       $autoplay,
       $loop
