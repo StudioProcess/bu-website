@@ -1,10 +1,16 @@
 <?php get_header(); ?>
 
 	<main role="main">
+
+		<?php if ( is_home() ): ?>
+		<section class="feature">
+			<div class="info"><?php echo prcs_get_post_content(516); ?></div>
+			<div class="reel"><?php echo prcs_get_reel(); ?></div>
+		</section>
+		<?php endif; ?>
+
 		<!-- section -->
 		<section>
-			<?php if (is_home()) include 'card-featured.php'; ?>
-
 			<?php //PrcsSync::sync(); // TODO: this takes too long
 			// $social_posts = prcs_get_social_posts(40);
 			// $num_social = sizeof($social_posts);
