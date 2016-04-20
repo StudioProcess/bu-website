@@ -21,7 +21,6 @@
 
 			<!-- header -->
 			<header class="header clear" role="banner">
-				<div class="header-back"></div> 
 				<div class="header-content">
 
 					<!-- nav -->
@@ -30,16 +29,6 @@
 					</nav>
 					<!-- /nav -->
 				</div>
-				<!-- custom navigation -->
-				<div class="navigation" role="navigation">
-					<div class="navigation-works">
-						<ul><li><a href="../../works/">Arbeiten</a></li></ul>
-					</div>
-					<div class="navigation-about">
-						<ul><li><a href="../../about/">Kontakt</a></li></ul>
-					</div>
-				</div>
-				<!-- /custom navigation -->
 
 			</header>
 			<!-- /header -->
