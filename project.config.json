@@ -1,5 +1,5 @@
 {
-	"browserSyncProxy" : "http://beniaminurbanek.com",
+	"browserSyncProxy" : "http://webneu.beniaminurbanek.com",
 	"browser" : "google chrome",
 	"ftpConfig" : "./ftp.config.json",
 	"wwwBase": "wp-content/themes/beniaminurbanek/",
