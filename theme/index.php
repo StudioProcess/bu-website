@@ -4,8 +4,12 @@
 
 		<?php if ( is_home() ): ?>
 		<section class="feature">
+			<div class="info">
+				<div class="info-half"><?php echo prcs_get_post_content(516); ?></div>
+				<div class="info-third"></div>
+				<div class="info-third"><?php echo prcs_get_post_content(536); ?></div>
+			</div>
 			<div class="reel"><?php echo prcs_get_reel(); ?></div>
-			<div class="info"><?php echo prcs_get_post_content(516); ?></div>
 		</section>
 		<?php endif; ?>
 
