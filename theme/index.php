@@ -6,15 +6,13 @@
 		<section class="feature">
 			<div class="info">
 				<div class="info-half"><?php echo prcs_get_post_content(516); ?></div>
-				<div class="info-third"></div>
-				<div class="info-third"><?php echo prcs_get_post_content(536); ?></div>
 			</div>
 			<div class="reel"><?php echo prcs_get_reel(); ?></div>
 		</section>
 		<?php endif; ?>
 
 		<!-- section -->
-		<section>
+		<section class="work-home">
 			<?php //PrcsSync::sync(); // TODO: this takes too long
 			// $social_posts = prcs_get_social_posts(40);
 			// $num_social = sizeof($social_posts);

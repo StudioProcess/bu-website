@@ -13,6 +13,7 @@
   // @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
    //@import url(https://fonts.googleapis.com/css?family=Karla:400,700,400italic);
    @import url(https://fonts.googleapis.com/css?family=Inconsolata);
+   @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 
  /**
   * Variables
@@ -20,7 +21,7 @@
   */
 
  // variables
- $font-family-base: Helvetica, Arial, sans-serif;
+ $font-family-base: 'Roboto', Helvetica, Arial, sans-serif;
  // $font-family-credits: "Inconsolata", Helvetica, sans-serif;
  // $font-family-base: "Palatino Linotype", "Book Antiqua", Palatino, serif;
  $font-size-base: 21;
@@ -46,7 +47,7 @@
  $body-bg: #EEE;
  $selection-bg: #fff;
  $selection-fg: lighten($text-color, 50%);
- $accent-color: #CCC;
+ $accent-color: #535353;
 
 // grid
  $wrapper-width: 1280px;
@@ -112,7 +113,7 @@ header {
 @media (min-width: 600px) {
   .header {
     // Header container
-    $header-height: 100px;
+    $header-height: 150px;
     padding-top: 0;
     height: $header-height;
     .header-content {
@@ -126,10 +127,10 @@ header {
     }
     nav {
       z-index: 10;
-      //font-family: Calibre;
       @include font-size($fs-menu);
       //text-transform: uppercase;
       //letter-spacing: 1px;
+      padding-top: 1.4em;
       font-weight: 600;
       line-height: 3.0;
       ul {
@@ -148,6 +149,7 @@ header {
           padding: 0 20px;
           &:hover {
             @include inverted();
+            text-decoration: underline;
             color: $accent-color;
           }
         }
@@ -315,6 +317,74 @@ body.home, body.archive {
 
 
    section { display:flex; flex-wrap:wrap; justify-content:space-around; align-items:center; }
+
+   article {
+     max-width: 470px !important;
+     margin: 0 0.5vw 30px !important;
+     padding: 0 !important;
+     position: relative;
+     .subtitle {
+       display: none;
+     }
+     hgroup {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       position: absolute;
+       width: 100%;
+       height: 101%;
+       top: 0;
+       pointer-events: none;
+       &:before {
+         background-color: $body-bg;
+         content: ' ';
+         display: block;
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         opacity: 0.1;
+         top: 0;
+         left: 0;
+       }
+     }
+     .title {
+       opacity: 0;
+       position: relative;
+       a {
+         text-decoration: none;
+         text-transform: none;
+         @include font-size($fs-subtitle);
+         color: $text-color;
+       }
+       margin: 0 15px;
+     }
+     &:hover {
+       hgroup:before {
+         opacity: 0.8;
+       }
+       .title {
+         opacity: 1;
+       }
+       cursor: pointer;
+     }
+     img {
+       //filter: grayscale(100%);
+       opacity: 0.9;
+     }
+     &:before {
+       content: ' ';
+       background-color: #ffffff;
+       display: block;
+       position: absolute;
+       width: 99.8%;
+       /* not 100%, because of chrome bug weißer blitzer */
+       height: 99.8%;
+       /* not 100%, because of chrome bug weißer blitzer */
+       top: 0;
+       left: 0;
+     }
+   }
+   /*
    article {
 
      display: inline-block;
@@ -380,7 +450,7 @@ body.home, body.archive {
        flex-basis: initial;
 
         text-align: center;
-        position: relative; */
+        position: relative; */ /*
         a {
           text-decoration: none;
           text-transform: none;
@@ -392,6 +462,7 @@ body.home, body.archive {
         }
       }
    }
+   */
 
    .feature {
       display: block;
@@ -400,13 +471,27 @@ body.home, body.archive {
       margin-bottom:100px;
 
       .info {display: flex; flex-grow:3; max-width:100% !important; }
-      .info-half { width: 100%; padding-right:1em; margin-bottom: 50px; }
+      .info-half { margin: 0 auto; width: 80%; padding-right:1em; margin-bottom: 50px; }
       .info-third { width: 50%; padding-right:1em; margin-bottom: 50px; }
-      .reel { flex-grow:3;
-         .vimeo-outer[style] { max-width:100% !important; }
+      @media (min-width: 600px) {
+        .reel { flex-grow:3; padding-left: 80px; padding-right: 80px; padding-top: 20px;
+           .vimeo-outer[style] { max-width:100% !important; }
+         }
+      }
+
+      @media (max-width: 599px) {
+        .reel { flex-grow:3;
+           .vimeo-outer[style] { max-width:100% !important; }
+         }
       }
    }
 
+}
+
+@media (min-width: 600px) {
+.work-home {
+  padding-top: 5em;
+  }
 }
 
 .work-container {
@@ -518,7 +603,7 @@ body.single-works {
 body.home, body.post-type-archive-works, body.archive.tag {
     article[style] {
       margin: 8% !important;
-      max-width: 400px !important;
+      //max-width: 400px !important;
       margin-bottom: 25% !important;
     }
     .work-container {
