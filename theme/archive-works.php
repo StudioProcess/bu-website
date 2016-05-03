@@ -1,5 +1,15 @@
 <?php get_header(); ?>
 
+<nav class='categories'>
+	<ul>
+	<?php $terms = get_terms( array('taxonomy' => 'category', 'exclude' => '1') );
+		foreach ($terms as $term) {
+			echo '<li><a href="' . get_term_link($term) . '">' . $term->name . '</a></li>';
+		}
+	?>
+	</ul>
+</nav>
+
 	<main role="main">
 		<!-- section -->
 		<section>
