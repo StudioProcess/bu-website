@@ -26,13 +26,13 @@
 
 			<section class="text">
 				<?php echo types_render_field('text', array()); ?>
+
+				<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 			</section>
 
 			<section class="credits">
 			<?php echo types_render_field('credits', array()); ?>
 			</section>
-
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
 			<style>
 			<? $fg = types_render_field('foreground-color-post', array()); ?>
