@@ -29,7 +29,7 @@ $fs-title-mobile: 20;
 $fs-footer: 14;
 $fs-archive-title: 18;
 $fs-archive-subtitle: 13;
-$fs-title: 55;
+$fs-title: 50;
 $fs-subtitle: 20;
 $fs-credits: 18;
 $fs-menu-categories: 19;
@@ -380,10 +380,8 @@ header {
   }
 }
 // hide all images for js fade-in
-html.js {
-  img {
-    visibility: hidden;
-  }
+img {
+  visibility: hidden;
 }
 /**
  * HOME Page / WORKS Archive
