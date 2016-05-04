@@ -29,7 +29,7 @@ $fs-title-mobile: 20;
 $fs-footer: 14;
 $fs-archive-title: 18;
 $fs-archive-subtitle: 13;
-$fs-title: 21;
+$fs-title: 55;
 $fs-subtitle: 20;
 $fs-credits: 18;
 $fs-menu-categories: 19;
@@ -171,7 +171,7 @@ header {
   nav.categories {
     @include font-size($fs-menu-categories);
     text-align: center;
-    line-height: 1em;
+    line-height: 2.5em;
     ul {
       padding: 1em 0 0;
       margin: 0 auto;
@@ -371,7 +371,8 @@ header {
   color: $accent-color;
   @include font-size($fs-footer);
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   p {
     font-weight: normal;
   }

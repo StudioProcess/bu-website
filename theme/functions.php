@@ -322,7 +322,7 @@ add_action("pre_get_posts", "prcs_custom_front_page");
 function prcs_custom_front_page($wp_query) {
 	if (is_admin()) return;
    if ( $wp_query->is_front_page() && $wp_query->is_main_query() ) {
-      $wp_query->set('post_type', array('works'));
+      $wp_query->set('post_type', array('arbeiten'));
       // $wp_query->set('page_id', ''); // empty page id
       // fix conditional fucntions like is_front_page or is_single ect
       $wp_query->is_front_page = 1;

@@ -9,7 +9,7 @@
 			</div>
 			<div class="reel"><?php echo prcs_get_reel(); ?></div>
 		</section>
-		<div class="featured-works-home">Featured Works</div>
+		<div class="featured-works-home">Arbeiten</div>
 		<?php endif; ?>
 
 		<!-- section -->
