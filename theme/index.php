@@ -8,6 +8,7 @@
 				<div class="info-half"><?php echo prcs_get_post_content(516); ?></div>
 			</div>
 			<div class="reel"><?php echo prcs_get_reel(); ?></div>
+			<div class="info-half">Featured Works</div>
 		</section>
 		<?php endif; ?>
 
