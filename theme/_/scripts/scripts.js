@@ -14,9 +14,9 @@
 
 	});
 
-	// fix Works menu highlight in single works
+	// fix 'Arbeiten' menu highlight in single works and category archives
 	$(function () {
-		$('body.single-works #menu-item-8').addClass('current-menu-item');
+		$('body.category, body.single-arbeiten').find('#menu-item-534').addClass('current-menu-item');
 	});
 
 } ( this, jQuery ));
