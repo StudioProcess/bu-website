@@ -41,11 +41,11 @@
 				background-color: <?php echo $bg; ?>;
 				color: <?php echo $fg; ?>;
 				}
-				body.page article a, body.single-works .text a {
+				body.page article a, body.single-arbeiten .text a {
 					color: <?php echo $fg; ?>;
 					border-bottom: 1px solid <?php echo $fg; ?>;
 				}
-				body.single-works .credits a {
+				body.single-arbeiten .credits a {
 					color: <?php echo $fg; ?>;
 					text-decoration: none;
 				}
@@ -84,14 +84,14 @@
 
 	</section>
 
-<h2 class="more-works">More Works</h2>
+<h2 class="more-works">Weitere Arbeiten</h2>
 
 	<section class="work-links-in-post">
 
 		<?php
 			// The Query
 			query_posts(array(
-				'post_type' => 'works',
+				'post_type' => 'arbeiten',
 				'tag__not_in' => array(3),
 				'post__not_in' => array($current_work)
 			) );

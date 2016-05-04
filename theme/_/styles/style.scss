@@ -37,10 +37,12 @@ $fs-tweet: 18;
 // colors
 $text-color: #1b1b1b;
 $body-bg: #f8f8f8;
-$selection-bg: #fff;
-$selection-fg: lighten($text-color, 50%);
+
 //$accent-color: #535353;
+//$accent-color: #ff7b7e;
 $accent-color: #ff7b7e;
+$selection-bg: lighten($accent-color, 10%);
+$selection-fg: #333;
 //$accent-color: #0000FF;
 // grid
 $wrapper-width: 1280px;
@@ -371,7 +373,7 @@ header {
   color: $accent-color;
   @include font-size($fs-footer);
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 50px;
   p {
     font-weight: normal;
@@ -656,7 +658,7 @@ body.home {
 /**
  * Single WORK
  */
-body.single-works {
+body.single-arbeiten {
   @media (max-width: 599px) {
     @include font-size($fs-menu-mobile)
     .title {
@@ -762,7 +764,8 @@ body.single-works {
 **/
 body.archive.tag,
 body.home,
-body.post-type-archive-works {
+body.archive,
+body.post-type-archive-arbeiten {
   article[style] {
     margin: 8% !important;
     //max-width: 400px !important;
@@ -777,7 +780,7 @@ body.post-type-archive-works {
 }
 @media (max-width: 600px) {
   body.archive.tag,
-  body.post-type-archive-works {
+  body.post-type-archive-arbeiten {
     img {
       width: 300px;
     }
@@ -863,7 +866,7 @@ body.page {
   height: 3px;
 }
 /* Work thumbnails on single works */
-body.single-works {
+body.single-arbeiten {
   .more-works {
     @include font-size($fs-subtitle);
     font-weight: bold;
