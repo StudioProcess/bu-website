@@ -41,8 +41,10 @@ $body-bg: #f8f8f8;
 //$accent-color: #535353;
 //$accent-color: #ff7b7e;
 //$accent-color: #ff7b7e; //spermablutrot
-$accent-color: #626e8c;
-$selection-bg: lighten($accent-color, 10%);
+//$accent-color: #626e8c; //blaugrau
+$accent-color: #000;
+$accent-color-red: #ff7b7e;
+$selection-bg: lighten($accent-color-red, 10%);
 $selection-fg: #333;
 //$accent-color: #0000FF;
 // grid
@@ -185,8 +187,8 @@ header {
         padding-right: 1.0em;
         &.current-menu-item a {
           color: $accent-color;
-          font-weight: bold;
-          border-bottom: 3px solid $accent-color;
+          //font-weight: bold;
+          border-bottom: 2px solid $accent-color;
         }
         a {
           text-decoration: none;
@@ -354,8 +356,8 @@ header {
         padding-right: 1.0em;
         &.current-menu-item a {
           color: $accent-color;
-          font-weight: bold;
-          border-bottom: 3px solid $accent-color;
+          //font-weight: bold;
+          border-bottom: 2px solid $accent-color;
         }
         a {
           text-decoration: none;
