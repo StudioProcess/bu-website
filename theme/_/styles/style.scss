@@ -673,7 +673,7 @@ body.single-arbeiten {
     @include font-size($fs-menu-mobile);
     .title {
       @include font-size($fs-title-mobile);
-      padding-top: 0px;
+      padding-top: 10px;
       padding-bottom: 20px;
       text-transform: uppercase;
       text-align: center;
@@ -685,8 +685,8 @@ body.single-arbeiten {
       font-weight: bold;
     }
     img {
-      padding-top: 2em;
-      padding-bottom: 2em;
+      padding-top: 1em;
+      padding-bottom: 1em;
     }
     .text {
       width: 100%;
@@ -714,6 +714,10 @@ body.single-arbeiten {
       a {
         text-decoration: none;
       }
+    }
+    .vimeo-outer {
+      padding-top: 1em;
+      padding-bottom: 1em;
     }
   }
   @media (min-width: 600px) {
