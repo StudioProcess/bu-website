@@ -586,8 +586,8 @@ function prcs_vimeo_html( $url_or_id, $atts = array() ) {
    if ( empty($id) ) return '';
 
    $atts = shortcode_atts( array(
-     'width' => '640',
-     'height' => '360',
+     'width' => '1000',
+     'height' => '563',
      'autoplay' => '0',
      'loop' => '0'
    ), $atts );
