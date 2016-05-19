@@ -452,7 +452,7 @@ function prcs_reel_admin() {
    if ( $id == $reel ) {
       echo '<style type="text/css"> #postdivrich {display:none;} </style>';
    } else {
-      echo '<style type="text/css"> #wpcf-group-video {display:none;} </style>';
+      echo '<style type="text/css"> #wpcf-group-video, label[for=wpcf-group-video-hide] {display:none;} </style>';
    }
 }
 add_action('admin_head', 'prcs_reel_admin');
