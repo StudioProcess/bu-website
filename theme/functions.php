@@ -457,6 +457,8 @@ function prcs_reel_admin() {
 }
 add_action('admin_head', 'prcs_reel_admin');
 
+// disable Types' 'Front-end Display' box on all posts and pages
+add_filter('types_information_table', function() { return false; });
 
 
 /*------------------------------------*\
