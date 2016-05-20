@@ -3,11 +3,13 @@
       <article class="work" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
       <!-- post thumbnail -->
+      <a href="<?php the_permalink(); ?>">
       <?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-         <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail('post-thumbnail'); ?>
-         </a>
+        <?php the_post_thumbnail('post-thumbnail'); ?>
+      <?php else: ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/_/img/missing-thumbnail-1280x720.png">
       <?php endif; ?>
+      </a>
       <!-- /post thumbnail -->
 
       <!-- post title -->
