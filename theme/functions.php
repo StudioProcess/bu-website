@@ -320,9 +320,13 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 // alter loop for custom front page
 add_action("pre_get_posts", "prcs_custom_front_page");
 function prcs_custom_front_page($wp_query) {
-	if (is_admin()) return;
-   if ( $wp_query->is_front_page() && $wp_query->is_main_query() ) {
-      $wp_query->set('post_type', array('arbeiten'));
+  if (is_admin()) return;
+    if ( $wp_query->is_front_page() && $wp_query->is_main_query() ) {
+      $wp_query->set( 'post_type', array('arbeiten') );
+      $wp_query->set( 'category__in', array(1) ); // 'home' category
+      $wp_query->set( 'nopaging', 1 );
+      $wp_query->set( 'posts_per_page', 0 );
+
       // $wp_query->set('page_id', ''); // empty page id
       // fix conditional fucntions like is_front_page or is_single ect
       $wp_query->is_front_page = 1;
@@ -344,15 +348,15 @@ function prcs_custom_front_page($wp_query) {
 // }
 
 
-// hide posts with 'hidden' tag (except in single view)
-add_action("pre_get_posts", "prcs_hidden_tag");
-function prcs_hidden_tag($wp_query) {
-	if (is_admin()) return;
-  if(is_tag()) return;
-   if ( $wp_query->is_main_query() && !$wp_query->is_single) {
-      $wp_query->set( 'tag__not_in', array(3) ); // 'hidden' tag
-    }
-}
+// // hide posts with 'hidden' tag (except in single view)
+// add_action("pre_get_posts", "prcs_hidden_tag");
+// function prcs_hidden_tag($wp_query) {
+// 	if (is_admin()) return;
+//   if(is_tag()) return;
+//    if ( $wp_query->is_main_query() && !$wp_query->is_single) {
+//       $wp_query->set( 'tag__not_in', array(3) ); // 'hidden' tag
+//     }
+// }
 
 
 function prcs_thumbnail_data($size = 'medium') {
