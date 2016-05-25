@@ -693,3 +693,15 @@ function disable_wp_emojicons() {
   add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
 // add_action( 'init', 'disable_wp_emojicons' );
+
+
+/*------------------------------------*\
+   user capabilities
+\*------------------------------------*/
+// editor can change theme options (menu)
+// saved to db so only run once
+function add_theme_caps() {
+    $role = get_role( 'editor' ); // gets the author role
+    $role->add_cap( 'edit_theme_options' );
+}
+// add_action( 'admin_init', 'add_theme_caps');
