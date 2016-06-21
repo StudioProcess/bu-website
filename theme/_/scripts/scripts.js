@@ -12,14 +12,14 @@
 		if (width >= fadeFromWidth) {
 			$("img").css("visibility", "hidden");
 			$("img").each(function () {
-				var loader = imagesLoaded($(this), function (iL) {
-					// console.log(iL.images[0]);
-					$(iL.images[0].img).css("visibility", "visible").fadeOut(0).fadeIn(300);
+				var $image = $(this);
+				var myLoaded = $.Deferred();
+				// fade in image
+				myLoaded.then(function() {
+					$image.css("visibility", "visible").fadeOut(0).fadeIn(300);
 				});
-				setTimeout(function() {
-					loader.complete();
-				}, timeout);
-
+				imagesLoaded($(this), myLoaded.resolve); // resolve after images are loaded
+				setTimeout(myLoaded.resolve, timeout); // resolve after timeout
 			});
 		} else {
 			$("img").css("visibility", "visible");
