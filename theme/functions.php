@@ -43,13 +43,16 @@ if (function_exists('add_theme_support'))
 }
 
 
-function prcs_remove_default_image_sizes($sizes) {
-   //  unset( $sizes['thumbnail'] );
-   unset( $sizes['medium'] );
-   unset( $sizes['large'] );
-   return $sizes;
-}
-add_filter('intermediate_image_sizes_advanced', 'prcs_remove_default_image_sizes');
+/*
+ * keep default image sizes for better srcset support
+ */
+// function prcs_remove_default_image_sizes($sizes) {
+//    //  unset( $sizes['thumbnail'] );
+//    unset( $sizes['medium'] );
+//    unset( $sizes['large'] );
+//    return $sizes;
+// }
+// add_filter('intermediate_image_sizes_advanced', 'prcs_remove_default_image_sizes');
 
 
 /*------------------------------------*\
