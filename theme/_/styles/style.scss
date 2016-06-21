@@ -387,7 +387,9 @@ header {
 // hide all images for js fade-in
 img {
   visibility: hidden;
+  background-color: $selection-bg;
 }
+
 /**
  * HOME Page / WORKS Archive
  */
