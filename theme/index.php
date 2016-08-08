@@ -1,12 +1,11 @@
 <?php get_header(); ?>
-
 	<main role="main">
 
 		<?php if ( is_home() ): ?>
 		<section class="feature">
-			<div class="info">
+			<!-- <div class="info">
 				<div class="info-half"><?php echo prcs_get_post_content(516); ?></div>
-			</div>
+			</div> -->
 			<div class="reel"><?php echo prcs_get_reel(); ?></div>
 		</section>
 		<div class="featured-works-home">Ausgewählte Arbeiten</div>

@@ -22,6 +22,7 @@
 			<!-- header -->
 			<header class="header clear" role="banner">
 				<div class="header-content">
+					<div class="logo-navigation"><img src="http://urbanek.studio/wp-content/uploads/2016/08/logo-u.png" width="50px"></div>
 
 					<!-- nav -->
 					<nav class="nav" role="navigation">
