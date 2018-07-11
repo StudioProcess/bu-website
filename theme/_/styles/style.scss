@@ -406,6 +406,14 @@ img {
 }
 
 /**
+ * Cookie Notice
+ */
+#cookie-notice {
+  a, a:visited, a:hover, a:active { color: white; }
+  a.button { font-family: $font-family-base; color: $text-color; }
+}
+
+/**
  * HOME Page / WORKS Archive
  */
 body.archive,
