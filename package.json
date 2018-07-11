@@ -9,6 +9,7 @@
   },
   "author": "Studio Process",
   "devDependencies": {
+    "bower": "^1.8.4",
     "browser-sync": "^2.11.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "0.0.7",
@@ -33,8 +34,10 @@
   "engines": {
     "node": "^5.10.1",
     "npm": "^3.8.6"
-   },
-   "scripts": {
-      "clean-install": "rm -rf theme/_/bower_components/; rm -rf node_modules/; bower install; npm install; gulp build"
-   }
+  },
+  "scripts": {
+    "start": "gulp serve",
+    "clean-install": "rm -rf theme/_/bower_components/; rm -rf node_modules/; bower install; npm install; gulp build"
+  },
+  "dependencies": {}
 }
