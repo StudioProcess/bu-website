@@ -23,7 +23,8 @@
 			<header class="header clear" role="banner">
 				<div class="header-content">
 					<!-- <div class="logo-navigation"><img src="http://urbanek.studio/wp-content/uploads/2016/08/logo-u.png" width="50px"></div> -->
-
+					
+					<div class="logo-navigation"><a href="<?php site_url(); ?>"><img src="https://urbanek.studio/wp-content/uploads/2020/03/logo_anim_thumb2_small.gif"></a></div>
 					<!-- nav -->
 					<nav class="nav" role="navigation">
 						<?php html5blank_nav(); ?>

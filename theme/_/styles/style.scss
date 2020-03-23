@@ -112,6 +112,16 @@ header {
   }
   .logo-navigation {
     display:none;
+    position: relative;
+    text-align: center;
+    margin-top: 1em;
+    img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+  body:not(.page-id-482) .logo-navigation {
+    display: block;
   }
 }
 @media (min-width: 630px) {
@@ -206,21 +216,45 @@ header {
     }
   }
   .logo-navigation {
+    display: none;
     background: none;
     position: fixed;
     left: 0.3em;
     top: 0.3em;
-    min-width: 50px;
-    min-height: 50px;
     img {
       background-color: transparent !important;
+      max-width: 85px;
+      max-height: 85px;
+    }
+  }
+  // all pages except /kontakt
+  body:not(.page-id-482) .logo-navigation {
+    display:block;
+  }
+}
+// 
+@media (min-width: 630px) and (max-width: 850px) {
+  // not on /kontakt
+  body:not(.page-id-482) { 
+    .logo-navigation {
+      display:block;
+      position: static;
+      text-align: center;
+      margin-top: 1em;
+    }
+    $header-height: 180px;
+    .header {
+      height: $header-height;
+      .header-content {
+        height: $header-height;
+      }
     }
   }
 }
 @media (max-width: 629px) {
   .header {
     // Header container
-    $header-height: 90px;
+    $header-height: 175px;
     padding-top: 0;
     height: $header-height;
     .header-content {
@@ -268,6 +302,15 @@ header {
       }
     }
   }
+  
+  body.page-id-482 .header {
+    $header-height: 100px;
+    height: $header-height;
+    .header-content {
+      height: $header-height;
+    }
+  }
+  
   .navigation {
     height: 180px;
     z-index: 10;
